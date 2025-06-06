@@ -37,7 +37,7 @@ def nova_postagem():
         'autor': 'Juan Murta'
     }
     postagens.append(postagem)
-    return jsonify(postagem, 200)
+    return jsonify(f'O posto foi adicionado {postagem} com sucesso', 200)
 
 
 # Alterar uma postagem existente - PUT
