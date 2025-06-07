@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request, make_response
 from estrutura_banco import Autor, Postagem, app, db
 import jwt
-import json
 from functools import wraps
 from datetime import datetime, timedelta
 
