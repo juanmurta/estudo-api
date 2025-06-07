@@ -28,10 +28,16 @@ class Autor(db.Model):
 
 
 # Executar o comando para criar o banco de dados
-with app.app_context():
-    db.drop_all()
-    db.create_all()
-    # Criar usuarios administradores
-    autor = Autor(nome='juan', email='juan@gmail.com', senha='123456', admin=True)
-    db.session.add(autor)
-    db.session.commit()
+def inicializar_banco():
+    with app.app_context():
+        db.drop_all()
+        db.create_all()
+        # Criar usuarios administradores
+        autor = Autor(nome='juan', email='juan@gmail.com', senha='123456', admin=True)
+        db.session.add(autor)
+        db.session.commit()
+
+
+if __name__ == '__main__':
+    inicializar_banco()
+
